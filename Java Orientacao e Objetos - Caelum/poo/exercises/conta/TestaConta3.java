@@ -4,8 +4,8 @@ public class TestaConta3 {
     public static void main(String[] args) {
 
         Conta c1 = new Conta();
-        c1.titular = "Kevin Richard";
-        c1.saldo = 100;
+        c1.setTitular("Kevin Richard");
+        c1.depositar(100);
 
         Conta c2 = new Conta();
         c2 = c1;

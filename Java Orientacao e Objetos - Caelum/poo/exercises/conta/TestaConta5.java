@@ -6,19 +6,19 @@ public class TestaConta5 {
         Data data = new Data();
         Conta conta = new Conta();
 
-        conta.titular = "Kevin Richard";
-        conta.numero = 12345678;
-        conta.agencia = "agência teste";
-        conta.saldo = 1000.0;
+        conta.setTitular("Kevin Richard");
+        conta.setNumero(12345678);
+        conta.setAgencia("agência teste");
+        conta.depositar(1000.0);
         conta.sacar(100.0);
         conta.depositar(200.0);
 
 
-        data.dia = 20;
-        data.mes = 3;
-        data.ano = 2024;
+        data.setDia(20);
+        data.setMes(3);
+        data.setAno(2024);
 
-        conta.dataDeAbertura = data;
+        conta.setDataDeAbertura(data);
         System.out.println(conta.recuperarDadosParaImpressao());
 
 

@@ -1,12 +1,11 @@
 package poo.exercises.conta;
 
-public class TestaConta {
+public class TestaConta6 {
     public static void main(String[] args) {
 
         Data data = new Data();
-        Conta conta = new Conta();
+        Conta conta = new Conta("Carlos Eduardo");
 
-        conta.setTitular("Kevin Richard");
         conta.setNumero(12345678);
         conta.setAgencia("agência teste");
         conta.depositar(1000.0);
