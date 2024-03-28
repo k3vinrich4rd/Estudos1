@@ -9,7 +9,11 @@ public class Conta {
     Data dataDeAbertura;
 
     void sacar(double quantia) {
-        this.saldo = this.saldo - quantia;
+        if (quantia > this.saldo) {
+            System.out.println("Não posso sacar um valor maior do que o saldo!");
+        } else {
+            this.saldo -= quantia;
+        }
     }
 
     void depositar(double quantia) {

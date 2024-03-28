@@ -1,6 +1,7 @@
 package exercises;
 
-public class TestAge {
+public class
+TestAge {
     public static void main(String[] args) {
 
         int age = 21;
