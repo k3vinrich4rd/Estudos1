@@ -6,33 +6,71 @@ public class Data {
     private int mes;
     private int ano;
 
-    String formatada() {
-        return "Dia: " + this.getDia() + "\n"
-                + "Mês: " + this.getMes() + "\n"
-                + "Ano: " + this.getAno();
+    public Data() {
+
     }
 
-    int getDia() {
+    public Data(int dia, int mes, int ano) {
+        this.preencheData(dia, mes, ano);
+    }
+
+    private boolean isDataViavel(int dia, int mes, int ano) {
+        if (dia <= 0 || mes <= 0) {
+            return false;
+        }
+        int ultimoDiaDoMes = 31;    //	por	padrao	são	31	dias
+        if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
+            ultimoDiaDoMes = 30;
+        } else if (mes == 2) {
+            if (ano % 4 == 0) {
+                ultimoDiaDoMes = 29;
+            } else {
+                ultimoDiaDoMes = 28;
+            }
+        }
+        if (dia > ultimoDiaDoMes) {
+            return false;
+        }
+        return true;
+    }
+
+
+    void preencheData(int dia, int mes, int ano) {
+        if (!isDataViavel(dia, mes, ano)) {
+            System.out.println("A data:	" + dia + "/" + mes + "/" + ano + "não existe!");
+        } else {
+            this.dia = dia;
+            this.mes = mes;
+            this.ano = ano;
+        }
+    }
+
+    String formatada() {
+        return this.dia + "/" + this.mes + "/" + this.ano;
+    }
+
+
+    public int getDia() {
         return this.dia;
     }
 
-    void setDia(int dia) {
+    public void setDia(int dia) {
         this.dia = dia;
     }
 
-    int getMes() {
+    public int getMes() {
         return this.mes;
     }
 
-    void setMes(int mes) {
+    public void setMes(int mes) {
         this.mes = mes;
     }
 
-    int getAno() {
+    public int getAno() {
         return this.ano;
     }
 
-    void setAno(int ano) {
+    public void setAno(int ano) {
         this.ano = ano;
     }
 
