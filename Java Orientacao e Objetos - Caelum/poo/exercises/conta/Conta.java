@@ -8,6 +8,10 @@ public class Conta {
     private double saldo;
     private Data dataDeAbertura;
 
+    private int identificador;
+
+    private static int proximoIdentificador;
+
 
     public Conta() {
 
@@ -15,9 +19,10 @@ public class Conta {
 
     public Conta(String titular) {
         this.titular = titular;
+        this.identificador = Conta.proximoIdentificador++;
     }
 
-    void sacar(double quantia) {
+    public void sacar(double quantia) {
         if (quantia > this.saldo) {
             System.out.println("Não posso sacar um valor maior do que o saldo!");
         } else {
@@ -25,15 +30,15 @@ public class Conta {
         }
     }
 
-    void depositar(double quantia) {
+    public void depositar(double quantia) {
         this.saldo += quantia;
     }
 
-    double getRendimento() {
+    public double getRendimento() {
         return this.saldo * 0.1;
     }
 
-    String recuperarDadosParaImpressao() {
+    public String recuperarDadosParaImpressao() {
         return
                 "Informações da conta: \n" +
                         "Nome do proprietário da conta: " + this.getTitular() + "\n" +
@@ -44,39 +49,43 @@ public class Conta {
                         "Data de abertura: " + this.getDataDeAbertura().formatada();
     }
 
-    String getTitular() {
+    public String getTitular() {
         return this.titular;
     }
 
-    void setTitular(String titular) {
+    public void setTitular(String titular) {
         this.titular = titular;
     }
 
-    int getNumero() {
+    public int getNumero() {
         return this.numero;
     }
 
-    void setNumero(int numero) {
+    public void setNumero(int numero) {
         this.numero = numero;
     }
 
-    String getAgencia() {
+    public String getAgencia() {
         return this.agencia;
     }
 
-    void setAgencia(String agencia) {
+    public void setAgencia(String agencia) {
         this.agencia = agencia;
     }
 
-    double getSaldo() {
+    public double getSaldo() {
         return this.saldo;
     }
 
-    Data getDataDeAbertura() {
+    public Data getDataDeAbertura() {
         return this.dataDeAbertura;
     }
 
-    void setDataDeAbertura(Data data) {
+    public void setDataDeAbertura(Data data) {
         this.dataDeAbertura = data;
+    }
+
+    public int getIdentificador() {
+        return this.identificador = Conta.proximoIdentificador;
     }
 }
