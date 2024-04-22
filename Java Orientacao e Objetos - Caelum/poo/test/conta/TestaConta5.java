@@ -1,6 +1,9 @@
-package poo.exercises.conta;
+package poo.test.conta;
 
-public class TestaConta {
+import poo.exercises.conta.Conta;
+import poo.exercises.conta.Data;
+
+public class TestaConta5 {
     public static void main(String[] args) {
 
         Data data = new Data();

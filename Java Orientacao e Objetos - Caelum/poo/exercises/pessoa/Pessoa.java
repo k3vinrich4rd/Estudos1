@@ -1,10 +1,10 @@
 package poo.exercises.pessoa;
 
 public class Pessoa {
-    String nome;
-    int idade;
+    public String nome;
+    public int idade;
 
-    void fazAniversario() {
+    public void fazAniversario() {
         this.idade += 1;
     }
 }

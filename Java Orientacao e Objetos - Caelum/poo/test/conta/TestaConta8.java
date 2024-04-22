@@ -1,22 +1,24 @@
-package poo.exercises.conta;
+package poo.test.conta;
 
-public class TestaConta7 {
+import poo.exercises.conta.Conta;
+import poo.exercises.conta.Data;
+
+public class TestaConta8 {
     public static void main(String[] args) {
 
 
         Data data = new Data();
-        Conta conta1 = new Conta("Carlos Eduardo");
+        Conta conta1 = new Conta();
 
-
+        conta1.setTitular("Kevin Richard");
         conta1.setNumero(12345678);
         conta1.setAgencia("agência teste");
         conta1.depositar(1000.0);
         conta1.sacar(100.0);
         conta1.depositar(200.0);
 
-        conta1.setDataDeAbertura(data);
+        conta1.setDataDeAbertura(new Data(31, 10, 2021));
         System.out.println(conta1.recuperarDadosParaImpressao());
 
-        System.out.println("Identificador: "  + conta1.getIdentificador());
     }
 }

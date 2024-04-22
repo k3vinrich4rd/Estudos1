@@ -1,4 +1,6 @@
-package poo.exercises.pessoa;
+package poo.test.pessoa;
+
+import poo.exercises.pessoa.Pessoa;
 
 public class TestaPessoa {
     public static void main(String[] args) {

@@ -1,4 +1,6 @@
-package poo.exercises.conta;
+package poo.test.conta;
+
+import poo.exercises.conta.Conta;
 
 public class TestaConta3 {
     public static void main(String[] args) {
