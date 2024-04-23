@@ -1,4 +1,4 @@
-package poo;
+package poo.test.conta;
 
 public class TestBanco2 {
     public static void main(String[] args) {
@@ -6,7 +6,7 @@ public class TestBanco2 {
         Conta minhaConta;
         minhaConta = new Conta();
 
-        minhaConta.balance = 1000.0;
+        minhaConta.deposita(1000.0);
         boolean consegui = minhaConta.saca(200);
 
         if (consegui) {

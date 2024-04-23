@@ -1,4 +1,6 @@
-package poo;
+package poo.test.conta;
+
+import poo.test.conta.Conta;
 
 public class TestBanco3 {
     public static void main(String[] args) {
@@ -6,7 +8,7 @@ public class TestBanco3 {
         Conta minhaConta;
         minhaConta = new Conta();
 
-        minhaConta.balance = 1000.0;
+        minhaConta.deposita(1000.0);
 
         if (minhaConta.saca(2000)) {
             System.out.println("Consegui sacar");
